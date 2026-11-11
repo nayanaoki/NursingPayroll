@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "apps": {
+    "pt": {
+      "name": "理学療法士",
+      "download_url": "https://github.com/nayanaoki/NursingPayroll/releases/download/v1.0.0/NursingPayroll_PT.zip"
+    },
+    "nurse": {
+      "name": "看護師",
+      "download_url": "https://github.com/nayanaoki/NursingPayroll/releases/download/v1.0.0/NursingPayroll_NS.zip"
+    },
+    "lpn": {
+      "name": "准看護師",
+      "download_url": "https://github.com/nayanaoki/NursingPayroll/releases/download/v1.0.0/NursingPayroll_LPN.zip"
+    }
+  }
+}
