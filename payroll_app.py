@@ -1500,8 +1500,7 @@ class App(tk.Tk):
         c_note, note = theme.card(t, padding=12)
         c_note.pack(fill="x", pady=(12, 0))
         theme.field_head(note, "計算のきまり").pack(anchor="w", pady=(0, 6))
-        ttk.Label(note, text=f"{prof.P['time_rule']}"
-                             "例：訪看Ⅰ２（実績29分）→ 30分、訪看Ⅰ５(×２) → 40分（2単位）。",
+        ttk.Label(note, text=f"{prof.P['time_rule']}" + prof.P["map_example"],
                   style="Muted.TLabel").pack(anchor="w")
         ttk.Label(note, text="規定時間を 0 にしたサービス（医療保険の基本療養費・定期巡回など）は"
                              "実時間で数えます。",
@@ -1691,10 +1690,10 @@ class App(tk.Tk):
             value=("0" if s.get("use_kitei", "1") == "0" else "1"))
         urow = ttk.Frame(f6)
         urow.pack(anchor="w", pady=(10, 0))
-        ttk.Radiobutton(urow, text="対応表の規定時間（訪看Ⅰ２ の 29分 → 30分）",
+        ttk.Radiobutton(urow, text=f"対応表の規定時間（{prof.P['kitei_example'][0]}）",
                         variable=self.var_use_kitei, value="1").pack(
             side="left", padx=(0, 16))
-        ttk.Radiobutton(urow, text="実績の実時間（29分 → 29分）",
+        ttk.Radiobutton(urow, text=f"実績の実時間（{prof.P['kitei_example'][1]}）",
                         variable=self.var_use_kitei, value="0").pack(side="left")
         ttk.Label(f6, text=f"{prof.P['time_rule']}"
                            "規定時間が 0 のサービスは、どちらを選んでも実時間です。",

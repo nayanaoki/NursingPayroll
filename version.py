@@ -12,7 +12,7 @@ version.json は1つで、アプリごとの配布URLを apps に持つ:
 リリースのたびに __version__ を上げ、version.json も同じ番号に更新する。
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # 起動時に取得する version.json の URL（3アプリ共通）
 UPDATE_URL = "https://raw.githubusercontent.com/nayanaoki/NursingPayroll/main/version.json"
